@@ -1,96 +1,105 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>03-表格标签</title>
 	<meta charset="utf-8">
+	<title>注册表单页面</title>
 	<style type="text/css">
-		table{
+		table,td{
+			border:2px solid red;
+			border-collapse: collapse;/* 设置边框合并*/
+			background: lightgray;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		td{
+			/* 设置单元格边框和内容之间的距离(内边距) */
+			padding: 5px;
+		}
 
-       border:2px solid red;
-
-       color:blue;
-
-       /* 设置表格的边框和单元格的边框合并 */
-
-       border-collapse: collapse;
-
-       /* 设置表格的宽度为网页宽度的70% */
-
-       width: 70%;
-
-       /* 设置当前元素的左右外边距自适应，即设置
-
-           当前元素水平方向居中 */
-
-       margin-left:auto;
-
-       margin-right:auto;
-
-       /* 设置背景颜色 */
-
-       background: pink;
-
-    }
-
-    td,th{
-
-       border:2px solid red;
-
-       /* 设置单元格的边框和内容之间的距离 */
-
-       padding:5px;
-
-    }
-
-    h1{
-
-       /* 让当前元素的内容居中显示 */
-
-       text-align: center;
-
-    }
-		
+		h1{
+			text-align: center;
+		}
+		#tjtd{
+			text-align: center;
+		}
 
 	</style>
-
-
 </head>
 <body>
-	<h1>插入一个4行4列的表格</h1>
-		
-	<table>
-		<tr>
-			<th>表头1</th>
-			<th>表头2</th>
-			<th>表头3</th>
-			<th>表头4</th>
-		</tr>
-		<tr>
-			<td>11</td>
-			<td>12</td>
-			<td>13</td>
-			<td>14</td>
-		</tr>
-		<tr>
-			<td>21</td>
-			<td>22</td>
-			<td>23</td>
-			<td>24</td>
-		</tr>
-		<tr>
-			<td>31</td>
-			<td>32</td>
-			<td>33</td>
-			<td>34</td>
-		</tr>
-		<tr>
-			<td>41</td>
-			<td>42</td>
-			<td>43</td>
-			<td>44</td>
-		</tr>
+	<h1>欢迎注册</h1>
+	<form action="#" method="GET">
+		<table>
+			<tr>
+				<td>用户名：</td>
+				<td>
+					<input type="text" name="username">
+				</td>
+			</tr>
+			<tr>
+				<td>密码：</td>
+				<td>
+					<input type="password" name="password">
+				</td>
+			</tr>
+			<tr><!-- 性别-->
+				<td>性别：</td>
+				<td>
+					<input type="radio" name="gender" value="man">男
+					<input type="radio" name="gender" value="woman">女
+					<input type="radio" name="gender" value="noman">妖
+				</td>
+			</tr>
+			<tr>
+				<td>爱好：</td>
+				<td>
+					<input type="checkbox" name="like" value="basketball">篮球
+					<input type="checkbox" name="like" value="football">足球
+					<input type="checkbox" name="like" value="volleyball">排球
+				</td>
+			</tr>
+			<tr>
+				<td>
+					城市：
+				</td>
+				<td>
+					<select name="city">
+						<option value="bj">北京</option>
+						<option value="sh">上海</option>
+						<option value="ty">太原</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>验证码：</td>
+				<td>
+					<input type="text" name="verifycode">
+					<img src="imgs/vc.jpg" width="80px" height="20px">
+					<input type="button" name="" value="换一个"> 
+				</td>
+			</tr>
+			<tr>
+				<td>自我描述：</td>
+				<td>
+					<textarea cols="30" rows="5" placeholder="请输入描述信息..."></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td id="tjtd" colspan="2">
+					<input type="submit">
+				</td>
+			</tr>
 
-	</table>
+
+		</table>
+
+	</form>
+
+
+
+
+
+
+
 
 
 
