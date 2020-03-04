@@ -1,0 +1,79 @@
+w<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>基本选择器</title>
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+	<!--
+	练习:
+		1.标签名选择器
+			将所有span标签的背景颜色设置为#DDA0DD, 设置字体大小为24px，字体加粗
+		2.类选择器
+			(1)将所有的span（但是不包括div和p标签下的span）的背景颜色设置为#8FBC8F, 字体颜色为绿色
+			(2)将div1下的span和内容为"span111"的span字体颜色设置blue, 背景颜色设置为#F0E68C
+		3.id选择器
+			用id选择器将第一个p标签设置字体加粗, 首行文本缩进20px.
+	-->
+		<style type="text/css" >
+			/* 为了看着方便给所有标签都加上边框，及设置一些默认的样式 */
+			div,span,p{border: 2px solid red;font-size:18px;}
+			span{border-color: blue;}
+			div,p{ width:300px;height:100px;padding:5px;}
+
+			/* 1.标签名选择器 */
+			span{
+				background: #DDA0DD;
+				font-size: 24px;
+				font-weight: bold;
+			}
+
+			/* 2.类选择器 */
+			.c1{
+				background: #8FBC8F;
+				background-color: green; 
+			}
+			.c2{
+				color: blue;
+				background-color: #F0E68C;
+			}
+
+			/* 3.id选择器 */
+			#p1{
+				font-weight: bold;
+				text-indent: 20px;
+			}
+
+
+
+		</style>
+	</head>
+	<body>
+		<br/>
+		<div>
+			div111
+			<span class="c2">这是一个span</span>
+			这是一个div
+		</div>
+		<br/>
+		
+		<span class="c1 c2">
+			span111
+		</span> &nbsp;&nbsp;&nbsp;
+		<span class="c1">
+			span222
+		</span> &nbsp;&nbsp;&nbsp;
+		<span class="c1">
+			span333
+		</span> &nbsp;&nbsp;&nbsp;
+		<p id="p1">
+			ppp111
+			<span>这是一个span</span>
+			这是一个P
+		</p>
+		<p>
+			ppp222
+			<span>这是一个span</span>
+			这是一个P
+		</p>
+		
+	</body>
+</html>
