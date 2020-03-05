@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>_left</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			background:#222D32;
+
+			margin:0px;/*样式重置，覆盖body自带的8px的外边距*/
+		}
+		div{
+			font-size: 22px;
+			/*div的边框*/
+			border-top:1px solid #fff;
+			/*div高度*/
+			height: 40px;
+			/*首行缩进*/
+			text-indent: 18px;
+			/*字符间隔*/
+			letter-spacing: 5px;
+			line-height:40px;/*针对单行文本，设置元素高度和行高一样高，可以让文本垂直居中！！*/
+		}
+		div a{
+			color: #fff;/*文本颜色*/
+			text-decoration:none;/*没有下划线*/
+		}
+		div a:hover{
+			/*当鼠标放在a标签上时才具有如下样式*/
+		background:#797979;
+		}
+
+		div:last-child{
+			border-bottom: 1px solid #fff;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div>
+		<a href="http://www.tmooc.cn" target="_blank">› 门店管理</a>
+	</div>
+	<div>
+		<a href="#">› 订单管理</a>
+	</div>
+	<div>
+		<a href="#">› 权限管理</a>
+	</div>
+</body>
+</html>
